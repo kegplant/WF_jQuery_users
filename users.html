@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Users</title>
+        <link rel="stylesheet" type="text/css" href="users.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('form').submit('#frac',function(event){
+                //alert('submitted');
+                event.preventDefault();
+                for(let i=0;i<4;i++){
+                    if(false){//check if each column filled
+                        alert('please fill out all fields');
+                        break;
+                    }else{
+                        if(i==0){
+                            $('.tbl').append('<ul></ul>');
+                            //console.log('appended');
+                        }
+                        //console.log()
+                        var labelSelector=`form label:nth-of-type(${i+1}) input`;
+                        $('.tbl ul:last-of-type').append(`<li>${$(`form label:nth-of-type(${i+1}) input`).val()}</li>`)
+                    }
+                    
+                }
+                
+                return false;
+            })
+        });
+        </script>
+    </head>
+    <body>
+        <div class="tbl">
+            <ul>
+                <li>First Name</li>
+                <li>Last Name</li>
+                <li>Email Address</li>
+                <li>Contact #</li>
+            </ul>
+        </div>
+        <form id="frac" action="process.php">
+            <h2>Add User</h2>
+            <label>
+                First Name: <input type="text" placeholder="First Name">
+            </label>
+            <label>
+                Last Name: <input type="text" placeholder="Last Name">
+            </label>
+            <label>
+                Email Address: <input type="text" placeholder="Email Address">
+            </label>
+            <label>
+                Contact #: <input type="text" placeholder="Phone #">
+            </label>
+            <button>Add User</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+*{
+    
+}
+.tbl{
+    width:700px;
+    border:1.5px solid black;
+    display:table;
+    border-collapse: collapse;
+}
+.tbl ul{
+    width:100%;
+    list-style: none;
+    display:table-row;
+    
+    height:20px;
+}
+.tbl ul:first-of-type{
+    border-bottom:1px solid black;
+}
+.tbl ul li{
+    line-height: 2;
+    display: table-cell;
+    width:20%;
+    padding-left:10px;
+    font-weight: bold;
+}
+form{
+    width:300px;
+    text-align: right;
+}
+h2{
+    border-bottom:2px solid black;
+    text-align:left;
+}
+label{
+    line-height:1.5;
+    display:block;
+    margin-bottom: 5px;
+}
+input{
+    border:1ps solid black;
+    line-height: 1.8;
+}
+button{
+    padding:5px;
+    margin-top:20px;
+    background:linear-gradient(white,silver);
+    border:1px solid black;
+    border-radius:5px;
+}
